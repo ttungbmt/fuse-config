@@ -1,0 +1,1 @@
+export const replaceAt = (array: any, index: any, replacement: any) => array.slice(0, index).concat([replacement]).concat(array.slice(index + 1))

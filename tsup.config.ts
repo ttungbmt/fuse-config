@@ -1,18 +1,15 @@
-import type { Options } from 'tsup';
+import { Options, defineConfig } from 'tsup';
 
-const env = process.env.NODE_ENV;
-
-export const tsup: Options = {
-  splitting: false,
-  sourcemap: env === 'production', // source map is only available in prod
-  clean: true, // rimraf disr
-  dts: true, // generate dts file for main module
-  format: ['cjs', 'esm'], // generate cjs and esm files
-  minify: env === 'production',
-  bundle: env === 'production',
-  skipNodeModulesBundle: true,
+export default defineConfig((options: Options) => ({
+  entry: ['src/index.ts'],
   target: 'es5',
+  minify: false,
+  watch: options.watch,
   outDir: 'dist',
-  entry: ['src/**/*.ts'],
+  format: ['cjs', 'esm'],
+  dts: true,
+  sourcemap: !options.watch,
+  splitting: false,
+  clean: true,
   treeshake: true
-};
+}))
