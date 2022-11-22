@@ -26,7 +26,8 @@
     "lint:fix": "eslint ./src --ext .ts,.tsx --quiet --fix --ignore-path ./.gitignore",
     "lint:format": "prettier --loglevel warn --write \"./**/*.{ts,tsx,css,md,json}\" ",
     "test": "vitest run",
-    "clean": "rimraf node_modules .turbo dist"
+    "clean": "rimraf node_modules .turbo dist",
+    "prepare": "npm run build"
   },
   "dependencies": {},
   "devDependencies": {

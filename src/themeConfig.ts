@@ -112,21 +112,21 @@ export default {
         MuiIconButton: {
             styleOverrides: {
                 root: ({theme}) => ({
-                    [`& span.${iconClasses.fontSizeInherit}`]: {
+                    [`& .FuseIcon-root.${iconClasses.fontSizeInherit}`]: {
                         fontSize: theme.typography.pxToRem(24*(1 - sizeFactor)),
                         width: theme.typography.pxToRem(24),
                         height: theme.typography.pxToRem(24),
                     }
                 }),
                 sizeSmall: ({theme}) => ({
-                    [`& span.${iconClasses.fontSizeInherit}`]: {
+                    [`& .FuseIcon-root.${iconClasses.fontSizeInherit}`]: {
                         fontSize: theme.typography.pxToRem(18*(1 - sizeFactor)),
                         width: theme.typography.pxToRem(18),
                         height: theme.typography.pxToRem(18),
                     }
                 }),
                 sizeLarge: ({theme}) => ({
-                    [`& span.${iconClasses.fontSizeInherit}`]: {
+                    [`& .FuseIcon-root.${iconClasses.fontSizeInherit}`]: {
                         fontSize: theme.typography.pxToRem(28*(1 - sizeFactor)),
                         width: theme.typography.pxToRem(28),
                         height: theme.typography.pxToRem(28),
@@ -147,16 +147,5 @@ export default {
                 floatingLabel: false
             },
         },
-        FuseTooltip: {
-            defaultProps: {
-
-            },
-            styleOverrides: {
-                root: {
-                    color: 'red',
-                    fontSize: 20
-                },
-            },
-        }
     }
 }
